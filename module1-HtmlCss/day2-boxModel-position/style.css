@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home{
+    width: 80%;
+    height: 80%;
+    margin: 0 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.header{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.logo{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 10px;
+}
+.register-form{
+    border: 1px solid black;
+    padding: 3px;
+}
+.content{
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+}
+.content-left{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 9px;
+}
+.top{
+    margin: 5px;
+    height: 50%;
+    border: 1px solid black;
+}
+.content-small{
+    box-sizing: border-box;
+    position: relative;
+    top: 200px;
+}
+.bottom{
+    margin: 5px;
+    height: 50%;
+    border: 1px solid black;
+}
+.content-right{
+    width: 100%;
+    border: 1px solid black;
+}
+.img{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: relative;
+    top: 20px;
+    left: 900px;
+}
