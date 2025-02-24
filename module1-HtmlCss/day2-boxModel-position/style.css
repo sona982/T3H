@@ -45,6 +45,7 @@
 }
 .top{
     margin: 5px;
+    padding: 5px;
     height: 50%;
     border: 1px solid black;
 }
@@ -54,11 +55,13 @@
     top: 200px;
 }
 .bottom{
+    text-align: center;
     margin: 5px;
     height: 50%;
     border: 1px solid black;
 }
 .content-right{
+    margin-left: 5px;
     width: 100%;
     border: 1px solid black;
 }
