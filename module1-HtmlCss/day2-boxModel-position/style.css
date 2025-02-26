@@ -3,7 +3,67 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.bt1{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+.bt1 img{
+    margin: 10px 0;
+    padding: 3px;
+    border: 1px solid black;
+}
+.bt2{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 7px;
+    box-shadow: 0px 4px 10px rgba(3, 3, 3, 0.4);
+}
+.bt2 img{
+    margin-bottom: 20px;
+}
+.bt2 hr{
+    margin-bottom: 12px;
+    border: none;
+    background: linear-gradient(to right, rgb(0, 38, 255), #9f6);
+    height: 1px;
+}
+.bt2 h2{
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+.bt2 p{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgb(124, 121, 121);
+}
+.buyNow{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.buyNow a{
+    width: 30%;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: rgb(75, 161, 75);
+    color: white;
+    transition: ease 0.5s;
+}
+.buyNow a:hover{
+    background-color: rgb(125, 173, 125);
+    box-shadow: 0px 4px 10px rgba(3, 3, 3, 0.4); ;
+    color: white;
+}
 .home{
     width: 80%;
     height: 80%;
