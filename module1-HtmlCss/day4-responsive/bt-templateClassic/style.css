@@ -85,7 +85,7 @@ p{
     gap: 2em;
 }
 .card{
-    width: 23em;
+    width: 21em;
 }
 .card-title{
     font-size: 1.5em;
@@ -109,9 +109,9 @@ p{
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
     gap: 18px;
-    margin: 4rem 6rem 0 6rem;
+    margin: 6em 0 0 0;
     width: 100%;
-    height: 1100px;
+    height: 1000px;
 }
 .new{
     display: flex;
@@ -156,8 +156,109 @@ p{
     grid-row: span 5 / span 5;
     display: flex;
     flex-direction: column;
+    gap: 15px;
+}
+.post-card{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     width: 100%;
+    margin: 1em 2em 2em 0;
 }
 .post-card img{
     width: 200px;
+}
+.post-card hr{
+    margin: 0;
+}
+.container1, .container2, .container3{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/* FOOTER  */
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    height: 500px;
+    background-image: url(./img/pngtree-dark-gray-honeycomb-mesh-pattern-on-black-metal-texture-wallpaper-image_13906781.png);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-sizing: border-box;
+    width: 300px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.link-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.p-small{
+    font-size: 12px;
+}
+
+.title {
+    color: #f1c40f; 
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    justify-content: center;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.description {
+    font-size: 14px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.browse-btn {
+    background-color: #bbb;
+    color: black;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.browse-btn:hover {
+    background-color: #999;
+}
+
+
+/* MOBILE  */
+@media screen and (max-width: 850px) {
+    .container3{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
