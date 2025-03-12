@@ -177,3 +177,54 @@ body{
     justify-content: space-between;
     padding: 10px;
 }
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    background-color: #FFF2CC;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.address{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0 0 0;
+    gap: 10px;
+}
+.phone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0 0 0;
+    gap: 10px;
+}
+@media screen and (max-width: 884px) {
+    .product-menu{
+        display: none;
+    }
+    .product-search{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .product-detail{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+}
