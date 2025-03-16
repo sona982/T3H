@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layout3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="./img/images (2).png" alt="logo">
+            <h2>My Shop</h2>
+        </div>
+        <nav class="menu" aria-label="Main navigation">
+            <ul class="menu-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact</a></li>
+                <li class="cart"><a href="">My Cart(0)</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <h3>Your Information</h3>
+        <div class="form-customer">
+            <form class="form-info" action="">
+                <div class="form-group">
+                    <label for="name">Full Name <span>*</span></label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span>*</span></label>
+                    <input type="number" name="phone" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address <span>*</span></label>
+                    <input type="text" name="address" id="address">
+                </div>
+            </form>
+            <div class="form-payment">
+                <label for="payment">Payment Method <span>*</span></label>
+                <div class="form-pay">
+                    <input type="radio" name="payment" id="credit-card">
+                    <label for="credit-card">Credit Card</label>
+                </div>
+                <div class="form-pay">
+                    <input type="radio" name="payment" id="your-bank">
+                    <label for="your-bank">Your Bank</label>
+                </div>
+                <div class="form-pay">
+                    <input type="radio" name="payment" id="momo">
+                    <label for="momo">Momo</label>
+                </div>
+            </div>
+        </div>
+        <h3>Cart</h3>
+
+        <div class="cart-total">
+            <div class="cart-item">
+                <input type="checkbox" name="cart" id="cart">
+                <img src="./img/images (2).png" alt="product">
+                <div class="cart-info">
+                    <h2>Lorem ipsum dolor</h2>
+                    <div class="style">
+                        <div class="blue">Blue</div>
+                        <div class="classic">Classic</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-remove">
+                <div class="quantity-select">
+                    <input type="number" name="quantity" id="quantity" value="1" min="1" max="100">
+                    <div class="total">Total: $210</div>
+                </div>
+                <div class="addToCart">
+                    <i class="fa-solid fa-trash"></i>
+                    <p>Remove</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-total">
+            <div class="cart-item">
+                <input type="checkbox" name="cart" id="cart">
+                <img src="./img/images (2).png" alt="product">
+                <div class="cart-info">
+                    <h2>Lorem ipsum dolor</h2>
+                    <div class="style">
+                        <div class="blue">Blue</div>
+                        <div class="classic">Classic</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-remove">
+                <div class="quantity-select">
+                    <input type="number" name="quantity" id="quantity" value="1" min="1" max="100">
+                    <div class="total">Total: $210</div>
+                </div>
+                <div class="addToCart">
+                    <i class="fa-solid fa-trash"></i>
+                    <p>Remove</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-total">
+            <div class="cart-item">
+                <input type="checkbox" name="cart" id="cart">
+                <img src="./img/images (2).png" alt="product">
+                <div class="cart-info">
+                    <h2>Lorem ipsum dolor</h2>
+                    <div class="style">
+                        <div class="blue">Blue</div>
+                        <div class="classic">Classic</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-remove">
+                <div class="quantity-select">
+                    <input type="number" name="quantity" id="quantity" value="1" min="1" max="100">
+                    <div class="total">Total: $210</div>
+                </div>
+                <div class="addToCart">
+                    <i class="fa-solid fa-trash"></i>
+                    <p>Remove</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>My Shop</h3>
+        <div class="contact">
+            <div class="address">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>20C Hoan Kiem, Ha Noi</p>
+            </div>
+            <div class="phone">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>0909090909</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

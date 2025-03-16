@@ -300,3 +300,20 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 5px 0 0 0;
     gap: 10px;
 }
+
+@media screen and (max-width: 838px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .product-img{
+        max-width: 100%;
+    }
+    .product-detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        gap: 20px;
+    }
+}
