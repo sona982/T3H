@@ -99,15 +99,61 @@
 // console.log(`tong cac so chan tu -30 toi 50 la: ${sum}`);
 
 // bai12
-let n = parseInt(prompt("nhap so n de tinh giai thua: "));
-if(n < 0 || !Number.isInteger(n)) {
-    console.log("khong the tinh duoc giai thua cua so am va so thap phan");5
+// let n = parseInt(prompt("nhap so n de tinh giai thua: "));
+// if(n < 0 || !Number.isInteger(n)) {
+//     console.log("khong the tinh duoc giai thua cua so am va so thap phan");
+// }
+// else{
+//     let giaiThua = 1;
+//     // for(let i = 1; i<= n;i++) {
+//     //     giaiThua *= i;
+//     // }
+//     while(n>0){
+//         giaiThua *= n;
+//         n--;
+//     }
+// }
+// console.log(`giai thua cua so ${n} la : ${giaiThua}`);
+// bai13 
+// let a,b,x;
+// do{
+//     a = parseInt(prompt("nhap a vao day'a<b': "));
+//     b = parseInt(prompt("nhap b vao day'a<b': "));
+//     x = parseInt(prompt("nhap so can chia het: "));
+// }
+// while(a>=b||x<=0);
+// // tiem so dau tien  >=a va chia het cho x
+// let start = Math.ceil(a/x)*x;
+// if(start <= b ) {
+//     console.log(`so nho nhat trong khoang tu ${a} den ${b} chia het cho ${x} la : ${start}`);
+// }
+// else{
+//     console.log(`khong co so nao chia het cho ${x} trong khoang tu ${a} den ${b}`);
+// }
 
+// bai14 
+// let n;
+// do{
+//     n = parseInt(prompt("nhap so n (n>=2)"));
+// }
+// while(n < 2 || isNaN(n));
+
+// let sum = 0;
+// for(let i = 1; i<=n; i++){
+//     sum+=1/(i*(i+1));
+// }
+// console.log(`ket qua cua bieu thuc theo n = ${n} la: ${sum}`);
+// bai15 
+// Ước là số được chia hết bởi một số khác
+let n;
+do{
+    n = parseInt(prompt("nhap so n de tinh uoc cua so do:" ));
 }
-else{
-    let giaiThua = 1;
-    for(let i = 1; i<= n;i++) {
-        giaiThua *= i;
+while(n<=0 || isNaN(n));
+let count = 0;
+for(let i = 1; i<=n;i++) {
+    if(n%i===0){
+        count ++;
     }
 }
-console.log(`giai thua cua so ${n} la : ${giaiThua}`);
+console.log(`so uoc cua ${n} la: ${count}`);
