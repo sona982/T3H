@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="todo-container">
+        <input type="text" id="todo-input" placeholder="...">
+        <button id="add-button">Thêm</button>
+
+        <ul id="todo-list">
+
+        </ul>
+
+        <div id="select-all-container">
+            <input type="checkbox" id="select-all">
+            <label for="select-all">Chọn tất cả</label>
+        </div>
+    </div>
+
+    <style>
+        #todo-container {
+            width: 400px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        #todo-input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        #add-button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    
+        #todo-list {
+        list-style-type: none;
+        padding: 0;
+        }
+    
+        #todo-list li {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        #todo-list li:last-child {
+            border-bottom: none;
+        }
+
+        #todo-list li input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #todo-list li span {
+            flex-grow: 1;
+        }
+
+        #select-all-container {
+            margin-top: 10px;
+        }
+    </style>
+
+<script>
+    const todoInput = document.getElementById('todo-input');
+    const addButton = document.getElementById('add-button');
+    const todoList = document.getElementById('todo-list');
+    const selectAllCheckbox = document.getElementById('select-all');
+
+    let todos = [];
+
+    function renderTodoList() {
+        todoList.innerHTML = '';
+        todos.forEach((todo, index) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <input type="checkbox" data-index="${index}" ${todo.completed ? 'checked' : ''}>
+            <span>${todo.text}</span>
+        `;
+        todoList.appendChild(listItem);
+        });
+
+        // Cập nhật trạng thái của checkbox "Chọn tất cả"
+        selectAllCheckbox.checked = todos.length > 0 && todos.every(todo => todo.completed);
+    }
+
+    function addTodo() {
+        const newTodoText = todoInput.value.trim();
+        if (newTodoText !== '') {
+        todos.push({ text: newTodoText, completed: false });
+        todoInput.value = '';
+        renderTodoList();
+        }
+    }
+
+    function toggleTodo(index) {
+        todos[index].completed = !todos[index].completed;
+        renderTodoList();
+    }
+
+    function selectAllTodos() {
+        const allChecked = selectAllCheckbox.checked;
+        todos.forEach(todo => {
+        todo.completed = allChecked;
+        });
+        renderTodoList();
+    }
+
+    addButton.addEventListener('click', addTodo);
+
+    todoInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addTodo();
+        }
+    });
+
+    todoList.addEventListener('change', function(event) {
+        if (event.target.type === 'checkbox') {
+            const index = parseInt(event.target.dataset.index);
+            toggleTodo(index);
+        }
+    });
+
+    selectAllCheckbox.addEventListener('change', selectAllTodos);
+
+    // Hiển thị danh sách ban đầu (nếu có dữ liệu mặc định)
+    renderTodoList();
+</script>
+</body>
+</html>
+
+
