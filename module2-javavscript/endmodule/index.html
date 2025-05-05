@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>#todo</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Đăng ký/Đăng nhập -->
+    <div id="auth-section">
+      <h1>#todo</h1>
+      <div id="auth-tabs">
+        <button id="login-tab" class="active">Đăng nhập</button>
+        <button id="register-tab">Đăng ký</button>
+      </div>
+      <form id="login-form" class="auth-form">
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Mật khẩu" required />
+        <button type="submit">Đăng nhập</button>
+        <div class="auth-message" id="login-message"></div>
+      </form>
+      <form id="register-form" class="auth-form" style="display:none;">
+        <input type="text" id="register-firstname" placeholder="Họ" required />
+        <input type="text" id="register-lastname" placeholder="Tên" required />
+        <input type="email" id="register-email" placeholder="Email" required />
+        <input type="password" id="register-password" placeholder="Mật khẩu" required />
+        <button type="submit">Đăng ký</button>
+        <div class="auth-message" id="register-message"></div>
+      </form>
+    </div>
+
+    <!-- Todo List -->
+    <div id="todo-section" style="display:none;">
+      <h1>#todo</h1>
+      <div class="todo-header">
+        <div class="todo-tabs">
+          <button class="tab active" data-tab="all">All</button>
+          <button class="tab" data-tab="active">Active</button>
+          <button class="tab" data-tab="completed">Completed</button>
+        </div>
+        <button id="logout-btn" class="logout-btn">Đăng xuất</button>
+      </div>
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="add details" autocomplete="off"/>
+        <button type="submit" id="add-btn">Add</button>
+      </form>
+      <ul id="todo-list"></ul>
+      <button id="delete-all-btn" class="delete-all-btn" style="display:none;">🗑 delete all</button>
+    </div>
+
+    <!-- Quản lý Users & Posts -->
+    <div id="manager-section" style="margin-top:40px;">
+      <h2>Quản lý Users & Posts</h2>
+      <div>
+        <button onclick="showManagerTab('login')">Đăng nhập</button>
+        <button onclick="showManagerTab('register')">Đăng ký</button>
+        <button onclick="showManagerTab('users')">Danh sách Users</button>
+        <button onclick="showManagerTab('posts')">Danh sách Posts</button>
+        <button onclick="showManagerTab('postDetail')">Chi tiết Post</button>
+        <button onclick="showManagerTab('searchPostsByUser')">Tìm post theo user</button>
+      </div>
+      <div id="manager-content" style="margin-top:20px;"></div>
+    </div>
+  </div>
+  
+  <script src="users.js"></script>
+  <script src="posts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 
